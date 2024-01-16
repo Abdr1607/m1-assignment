@@ -9,62 +9,36 @@
             <h1>Ready to Adopt Pet?</h1>
             <nav class="main-menu">
                 <ul>
-                    <li><a href="lab3.html">Dogs</a></li>
-                    <li><a href="lab3.html">Cats</a></li>
-                    <li><a href="lab3.html">Other pets</a></li>
+                    <li><a href="lab1.html">Dogs</a></li>
+                    <li><a href="lab1.html">Cats</a></li>
+                    <li><a href="lab1.html">Other pets</a></li>
                     <li>Shelters</li>
                 </ul>
             </nav>
             <main>
-                <table border="1">
-                    <caption>Pets to adopt</caption>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Animal Type</th>
-                            <th>Age</th>
-                            <th>Location</th>
-                            <th>Contact</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Buddy</td>
-                            <td>Dog</td>
-                            <td>3 years</td>
-                            <td>Cityville</td>
-                            <td>contact@petadoption.com</td>
-                        </tr>
-                        <tr>
-                            <td>Whiskers</td>
-                            <td>Cat</td>
-                            <td>2 years</td>
-                            <td>Townsville</td>
-                            <td>contact@petadoption.com</td>
-                        </tr>
-                        <tr>
-                            <td>Thomas</td>
-                            <td>Dog</td>
-                            <td>1 years</td>
-                            <td>Hometown</td>
-                            <td>contact@petadoption.com</td>
-                        </tr>
-                        <tr>
-                            <td>Lanny</td>
-                            <td>Cat</td>
-                            <td>11 months</td>
-                            <td>Youthsville</td>
-                            <td>contact@petadoption.com</td>
-                        </tr>
-                        <tr>
-                            <td>Micheal</td>
-                            <td>Cat</td>
-                            <td>8 months</td>
-                            <td>Hannytown</td>
-                            <td>contact@petadoption.com</td>
-                        </tr>
-                    </tbody>
-                </table><br>
+                <form action="/contact" method="post">
+                    <fieldset>
+                        <legend>Adopt a Pet</legend>
+                        <label>Enter you full name</label><br>
+                        <input type="text" name="name"><br>
+                        <label>Enter your email</label><br>
+                        <input type="email" name="email"><br>
+                        <label>Enter your phone</label><br>
+                        <input type="text" name="phone"><br>
+                        <br><label>How should we contact you?</label><br>
+                        <input type="radio" name="contact" value="Email"/>Email
+                        <input type="radio" name="contact" value="Phone"/>Phone <br/>
+                        <br><label>What Pet do you want to adopt?</label><br>
+                        <select>
+                            <option>Cat</option>
+                            <option>Dog</option>
+                            <option>Other Pet</option>
+                        </select><br>
+                        <br>How did you hear about us:<br>
+                        <textarea rows="5" cols="30"></textarea><br>
+                        <input type="submit" value="sign-up">
+                    </fieldset>
+                </form>
 
                 <h1>Check out adoption advice</h1>
                 <h4>Get the inside scoop on pet adoption
