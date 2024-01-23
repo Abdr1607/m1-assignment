@@ -1,0 +1,30 @@
+/*.logo img {
+    width: 100px;
+}*/
+.logo2 img {
+    width: 1500px;
+}
+.main-menu ul li {
+    display: inline;
+    list-style-type: none;
+    width: 80px;
+    margin-left: 250px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    vertical-align: middle;
+    border-left: 1px solid rgba(202, 204, 202, 0.6);
+    font-size: 20px;
+    line-height: 100px;
+}
+.main-menu ul li a {
+    color: antiquewhite;
+}
+.main-header {
+    background-color: teal;
+    width: 1500px;
+    height: 100px;
+}
