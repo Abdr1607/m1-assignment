@@ -171,6 +171,60 @@ input[type="submit"] {
 
 }
 
+/* Gallery */
+
+#pets-lab4 {
+    display: flex; /* Use flexbox to layout childrena */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    justify-content: space-around; /* Space out items evenly */
+}
+
+#pets-lab4 .photo {
+    flex: 0 0 48%; /* Flex-grow, Flex-shrink, Flex-basis */
+    display: flex; /* Use flex for the photo li */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Align items in the center horizontally */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    margin-bottom: 40px; /* Margin at the bottom for spacing between rows */
+    height: auto; 
+    position: relative;
+}
+
+
+#pets-lab4 .photo img {
+    width: 100%; /* Make image fill the container */
+    height: 100%;
+    max-height: 250px; /* Explicitly set the height to fill the container */
+    object-fit: cover; /* Cover the area without breaking aspect ratio, cropping as needed */
+}
+#pets-lab4 .photo .caption {
+    text-align: center; /* Center the caption text */
+    padding-top: 8px; /* Add some space between the image and the caption */
+    font-size: 1em; /* Set the font size for the caption */
+    color: #333; /* Set the font color for the caption */
+    width: 100%; 
+    text-transform: uppercase;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#pets-lab4 .photo .description {
+    display: none;
+    position: absolute; /* Position it on top of the image */
+    bottom: 0; /* Align it to the bottom of the li */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text color */
+    width: 70%; /* Full width */
+    text-align: center; /* Center the text */
+    padding: 10px 0; /* Some padding */
+    margin-bottom: 40px;
+}
+#pets-lab4 .photo:hover .description {
+    display: inline-block;
+}
+
+
+
 /* footer */
 footer {
     width: 100%;

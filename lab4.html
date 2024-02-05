@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Container to wrap everything -->
+        <div id="container">
+            <!-- Brand of website -->
+            <header>Adopt a Pet</header>
+            <!-- Main Navigation -->
+            <nav>
+                <ul>
+                    <li><a href="lab1.html">Home</a></li>
+                    <li><a href="lab2.html">Pets</a></li>
+                    <li><a href="lab4.html">Gallery</a></li>
+                    <li><a href="lab3.html">Adoption</a></li>
+                </ul>
+            </nav> <!-- End Main Navigation -->
+
+            <!-- Main Content -->
+            <main>
+                <ul id="pets-lab4">
+                    <!--<li class="photo1"><img src="images/pet1.webp" alt="Pet 1"></li>
+                    <li class="photo2"><img src="images/pet2.webp" alt="Pet 2"></li>
+                    <li class="photo3"><img src="images/pet3.webp" alt="Pet 3"></li>
+                    <li class="photo4"><img src="images/pet4.webp" alt="Pet 4"></li>
+                    <li class="photo5"><img src="images/pet5.jpeg" alt="Pet 5"></li>
+                    <li class="photo6"><img src="images/pet6.webp" alt="Pet 6"></li>
+                    <li class="photo7"><img src="images/pet7.webp" alt="Pet 7"></li>
+                    <li class="photo8"><img src="images/pet8.jpeg" alt="Pet 8"></li>
+                    <li class="photo9"><img src="images/pet9.webp" alt="Pet 9"></li>
+                    <li class="photo10"><img src="images/pet10.jpeg" alt="Pet 10"></li>-->
+                </ul>
+            </main> <!-- End Main Content -->
+            
+            <!-- Footer Information -->
+            <footer>
+                <div class="copy">&copy; Copyright 2020</div>
+                <div class="social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                </div>
+                <div class="logo-footer">
+                    <img src="images/Logo-AAP.svg" alt="Adopt a Pet">
+                </div>
+            </footer>
+        </div> <!-- End Container -->
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) => {
+                // Array of objects, each object contains the image source and alt text
+                const photos = [
+                { src: "images/pet1.webp", alt: "Pet 1", caption: "Whisker Haven", description: "A pet you can adopt"},
+                { src: "images/pet2.webp", alt: "Pet 2", caption: "Paws and Reflect", description: "A pet you can adopt"},
+                { src: "images/pet3.webp", alt: "Pet 3", caption: "Furry Fiesta", description: "A pet you can adopt"},
+                { src: "images/pet4.webp", alt: "Pet 4", caption: "Clawed Monet", description: "A pet you can adopt"},
+                { src: "images/pet5.jpeg", alt: "Pet 5", caption: "Bark Boulevard", description: "A pet you can adopt"},
+                { src: "images/pet6.webp", alt: "Pet 6", caption: "Tail Wag Terrace", description: "A pet you can adopt"},
+                { src: "images/pet7.webp", alt: "Pet 7", caption: "Purrs and Paws", description: "A pet you can adopt"},
+                { src: "images/pet8.jpeg", alt: "Pet 8", caption: "Feline Serenity", description: "A pet you can adopt"},
+                { src: "images/pet9.webp", alt: "Pet 9", caption: "Canine Creek", description: "A pet you can adopt"},
+                { src: "images/pet10.jpeg", alt: "Pet 10", caption: "Snuggle Street", description: "A pet you can adopt"}
+                ];
+            
+                // Select the <ul> element where the photos will be displayed
+                const ul = document.getElementById('pets-lab4');
+            
+
+                const openCaptionTag = '<div class="caption">';
+                const closeCaptionTag = '</div>';
+                const openDescTag = '<div class="description">';
+                const closeDescTag = '</div>';
+
+                const captionTexts = ["caption"];
+                const descTexts = ["description"];
+    
+                // Iterate over the photos array
+                photos.forEach(photo => {
+                    // Create a new <li> element
+                    const li = document.createElement('li');
+                    li.className = 'photo'; // Add the 'photo' class to the <li>
+        
+                    // Create a new <img> element
+                    const img = document.createElement('img');
+                    img.src = photo.src; // Set the source of the image
+                    img.alt = photo.alt; // Set the alt text of the image
+
+                    const captionDiv = document.createElement('div');
+                    captionDiv.className = 'caption'; // Add the 'caption' class
+                    captionDiv.textContent = photo.caption; // Set the caption text
+
+                    const descriptionDiv = document.createElement('div');
+                    descriptionDiv.className = 'description'; // Add the 'description' class
+                    descriptionDiv.textContent = photo.description;
+            
+                    // Append the <img> to the <li>
+                    li.appendChild(img);
+                    li.appendChild(captionDiv);
+                    // Append the <li> to the <ul>
+                    li.appendChild(descriptionDiv);
+                    ul.appendChild(li);
+                    
+                });
+            });
+            
+        </script>
+            
+    </body>
+</html>
