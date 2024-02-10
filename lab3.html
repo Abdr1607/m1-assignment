@@ -48,18 +48,27 @@
                             <input type="text" name="phone">
                         </div>
                         <div class="radios">
-                            <label>How should we contact you</label>
-                            <input type="radio" name="gender" value="Email"/>Email
-                            <input type="radio" name="gender" value="Phone"/>Phone
+                            <label>What Pet do you want to adopt?</label>
+                            <input type="radio" name="gender" value="Cat"/>Cat
+                            <input type="radio" name="gender" value="Dog"/>Dog
                         </div>
                         <div class="selectmenu">
-                            <label>What Pet do you want to adopt?</label>     
-                            <select>
-                                <option>Cat</option>
-                                <option>Dog</option>
-                                <option>Other</option>
+                            <label>How should we contact you</label>     
+                            <select id="contactMethod">
+                                <option value="" selected disabled>Select one</option>
+                                <option>Email</option>
+                                <option>Phone</option>
                             </select>
                         </div>
+                        <div class="inputField" id="inputEmail" style="display: none;">
+                            <label>Enter your email</label>
+                            <input type="email" name="email">
+                        </div>
+                        <div class="inputField" id="inputPhone" style="display: none;">
+                            <label>Enter your phone</label>
+                            <input type="text" name="phone">
+                        </div>
+
                         <div class="commentbox">
                             <label>How did you hear about us:</label>
                             <textarea rows="5" cols="30"></textarea>
@@ -85,5 +94,8 @@
                 </div>
             </footer>
         </div> <!-- End Container -->
+
+        <script src="contact.js"></script>
+
     </body>
 </html>
