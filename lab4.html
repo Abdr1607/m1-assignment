@@ -34,6 +34,13 @@
                     <li class="photo9"><img src="images/pet9.webp" alt="Pet 9"></li>
                     <li class="photo10"><img src="images/pet10.jpeg" alt="Pet 10"></li>-->
                 </ul>
+
+                <div class="info-box" style="display: none;">
+                    <h3 class="info-heading">Heading Placeholder</h3>
+                    <p class="info-text">Information Placeholder</p>
+                    <a href="#" class="info-close">Click This To Close</a>
+                </div>
+                    
             </main> <!-- End Main Content -->
             
             <!-- Footer Information -->
@@ -50,64 +57,7 @@
             </footer>
         </div> <!-- End Container -->
 
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) => {
-                // Array of objects, each object contains the image source and alt text
-                const photos = [
-                { src: "images/pet1.webp", alt: "Pet 1", caption: "Whisker Haven", description: "A pet you can adopt"},
-                { src: "images/pet2.webp", alt: "Pet 2", caption: "Paws and Reflect", description: "A pet you can adopt"},
-                { src: "images/pet3.webp", alt: "Pet 3", caption: "Furry Fiesta", description: "A pet you can adopt"},
-                { src: "images/pet4.webp", alt: "Pet 4", caption: "Clawed Monet", description: "A pet you can adopt"},
-                { src: "images/pet5.jpeg", alt: "Pet 5", caption: "Bark Boulevard", description: "A pet you can adopt"},
-                { src: "images/pet6.webp", alt: "Pet 6", caption: "Tail Wag Terrace", description: "A pet you can adopt"},
-                { src: "images/pet7.webp", alt: "Pet 7", caption: "Purrs and Paws", description: "A pet you can adopt"},
-                { src: "images/pet8.jpeg", alt: "Pet 8", caption: "Feline Serenity", description: "A pet you can adopt"},
-                { src: "images/pet9.webp", alt: "Pet 9", caption: "Canine Creek", description: "A pet you can adopt"},
-                { src: "images/pet10.jpeg", alt: "Pet 10", caption: "Snuggle Street", description: "A pet you can adopt"}
-                ];
-            
-                // Select the <ul> element where the photos will be displayed
-                const ul = document.getElementById('pets-lab4');
-            
-
-                const openCaptionTag = '<div class="caption">';
-                const closeCaptionTag = '</div>';
-                const openDescTag = '<div class="description">';
-                const closeDescTag = '</div>';
-
-                const captionTexts = ["caption"];
-                const descTexts = ["description"];
-    
-                // Iterate over the photos array
-                photos.forEach(photo => {
-                    // Create a new <li> element
-                    const li = document.createElement('li');
-                    li.className = 'photo'; // Add the 'photo' class to the <li>
-        
-                    // Create a new <img> element
-                    const img = document.createElement('img');
-                    img.src = photo.src; // Set the source of the image
-                    img.alt = photo.alt; // Set the alt text of the image
-
-                    const captionDiv = document.createElement('div');
-                    captionDiv.className = 'caption'; // Add the 'caption' class
-                    captionDiv.textContent = photo.caption; // Set the caption text
-
-                    const descriptionDiv = document.createElement('div');
-                    descriptionDiv.className = 'description'; // Add the 'description' class
-                    descriptionDiv.textContent = photo.description;
-            
-                    // Append the <img> to the <li>
-                    li.appendChild(img);
-                    li.appendChild(captionDiv);
-                    // Append the <li> to the <ul>
-                    li.appendChild(descriptionDiv);
-                    ul.appendChild(li);
-                    
-                });
-            });
-            
-        </script>
+        <script src="gallery.js"></script>
             
     </body>
 </html>
