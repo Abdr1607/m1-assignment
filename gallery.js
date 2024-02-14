@@ -101,3 +101,78 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+
+
+/*$(document).ready(function() {
+    // Function to create the lightbox div elements
+        function createLightbox() {
+        const lightbox = $('<div class="lightbox-overlay"></div>');
+        const lightboxContent = $('<div class="lightbox-content"></div>');
+        const closeBtn = $('<span class="close-btn">&times;</span>');
+
+        // Append close button and content div to lightbox overlay
+        lightbox.append(lightboxContent);
+        lightbox.append(closeBtn);
+
+        // Append lightbox to body
+        $('body').append(lightbox);
+
+        // Click event to hide the lightbox
+        lightbox.on('click', function() {
+        $(this).hide();
+        });
+
+        // Prevent click inside the lightbox content to propagate to the overlay
+        lightboxContent.on('click', function(e) {
+        e.stopPropagation();
+        });
+
+        // Click event for close button
+        closeBtn.on('click', function() {
+        lightbox.hide();
+        });
+    }
+
+    // Call the function to create lightbox on page load
+    createLightbox();
+
+    // Click event for gallery images
+    $('#pets-lab4').on('click', '.photo img', function() {
+        const src = $(this).attr('src');
+        const lightboxImage = $('<img>').attr('src', src);
+
+        $('.lightbox-content').empty().append(lightboxImage);
+        $('.lightbox-overlay').show();
+    });
+    });*/
+
+
+$(document).ready(function() {
+    const $backdrop = $('.backdrop'); // Select the backdrop element
+    const $lightboxContent = $('.lightbox-content'); // Select the lightbox content element
+    const $closeBtn = $('.close-btn'); // Select the close button
+    
+    // Click event for gallery images
+    $('#pets-lab4').on('click', '.photo img', function() {
+        const src = $(this).attr('src');
+        const lightboxImage = $('<img>').attr('src', src);
+    
+        $lightboxContent.empty().append(lightboxImage);
+        $backdrop.fadeIn();
+    });
+    
+    // Click event to hide the lightbox
+        $backdrop.on('click', function() {
+        $backdrop.fadeOut();
+    });
+    
+    // Prevent click inside the lightbox content from hiding the lightbox
+    $lightboxContent.on('click', function(e) {
+        e.stopPropagation();
+    });
+    
+    // Click event for close button
+    $closeBtn.on('click', function() {
+        $backdrop.fadeOut();
+    });
+});
